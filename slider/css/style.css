@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	animation: bounce 5s linear 5;
+
+}
+
+.slider__item {
+	width: 20%;
+	height: 100%;
+	background-color: green;
+	box-shadow: -10px 0px 23px 0px rgba(0,0,0,0.75);
+
+
+}
+
+.slider__item:before {
+	content: '';
+	display: inline-block;
+	font-size: 30px;
+	color: #fff;
+	position: absolute;
+	top: clac(50% - 15px);
+	left: 20px;
+}
+
+.slider__item:ntn-child(1):before {
+	content: '1';
+}
+
+.slider__item:ntn-child(2):before {
+	content: '2';
+}
+
+.slider__item:ntn-child(3):before {
+	content: '3';
+}
+
+.slider__item:ntn-child(4):before {
+	content: '4';
+}
+
+.slider__item:hover {
+	width: 80% ;
+}
+
+@keyframes anim {
+	0% {transform:  scale(0.9);}
+	50% {background-color: blue;}
+	100% {transform:  scale(1.1);}
+}
+
+
+@keyframes anim2 {
+  0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+	animation: anim 3s linear 5 forwards;
+	background: red;
+}
+
+.box2 {
+	width: 100px;
+	height: 100px;
+	border: 1px solid #000;
+		animation: bounce 5s linear 5;
+}
